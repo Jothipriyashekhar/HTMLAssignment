@@ -1,0 +1,65 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<body>
+<style type="text/css">
+    .container {
+      width:500px;
+    }
+    .left {
+      width:1000px;
+      float:top;
+     background-color: lightpink;
+    }
+    .right {
+      width:1000px;
+      float:bottom;
+      background-color: wheat;
+    }
+
+    #play{
+        background-color:darkred;
+       
+    }
+
+    #pause{
+        background-color:yellow;
+         float:right;
+    }
+</style>
+ 
+<div class="container">
+   <div class="left">
+       <p style="text-align:center"><b>Awesome Online Videos</b></p>
+       <video id="video" >
+ <source src="video/sample.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+   </div>
+   <div class="right">
+       <button id="play" onclick="play()">play</button>
+        <button id="pause" onclick="pause()">pause</button>
+   </div>
+</div>
+
+    <script>
+
+        var video = document.getElementById("video");
+        var playvideo = document.getElementById("play");
+        var pausevideo = document.getElementById("pause");
+
+        function play() {
+           // alert("play");
+            video.play();
+            playvideo.style.background="url(play.png) no-repaet"
+        }
+
+        function pause() {
+           // alert("pause");
+            video.pause();
+            pausevideo.style.background = "url(pause.png) no-repaet"
+        }
+    </script>
+</body>
+</html>

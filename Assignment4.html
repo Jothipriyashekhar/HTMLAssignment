@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>jQuery Line Chart</title> 
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$(".chartContainer").CanvasJSChart({
+		title: {
+			text: "The yield of Bajra from 2001 to 2007"
+		},
+		axisY: {
+			title: "values (in lakh tonnes)",
+			includeZero: false
+		},
+		axisX: {
+			interval: 1
+		},
+		data: [
+		{
+			type: "line", 
+			toolTipContent: "{label}: {y} mm",
+			dataPoints: [
+				{ label: "2001",  y: 281 },
+				{ label: "2002",  y: 277 },	
+              	{ label: "2003",  y: 275 },
+              	{ label: "2004",  y: 457 },
+             	 { label: "2005",  y: 200 },
+              	{ label: "2006",  y: 280 },
+              	{ label: "2007",  y: 150 },
+
+			]
+		}
+		]
+	});
+});
+</script>
+</head>
+<body>
+<div class="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>

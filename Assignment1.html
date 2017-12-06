@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<style type="text/css">
+   
+ table,tr,td,th{
+     border:1px solid black;
+ }   
+</style>
+ 
+<div class="container">
+   <table>
+       <tr>
+           <th>TICKER</th>
+           <th>PRICE</th>
+        </tr>
+       <tr>
+           <td>WIPRO</td>
+           <td>298.45</td>
+       </tr>
+        <tr>
+           <td>INFY</td>
+           <td>949.95</td>
+       </tr>
+        <tr>
+           <td>TCS</td>
+           <td>2713.70</td>
+       </tr>
+       <tr>
+           <td>TECHM</td>
+           <td>485.85</td>
+       </tr>
+   </table>
+    <p><b>Stock Trading</b></p>
+    <table>
+        <tr>
+            <td>Ticker:</td>
+            <td><input type="text" /></td>
+        </tr>
+       
+        <tr>
+            <td>Quantity:</td>
+            <td><input type="number" id="numb" /></td>
+        </tr>
+         <tr>
+            <td><button onclick="submit()">submit</button></td>
+        </tr>
+    </table>
+</div>
+
+    <script>
+        function submit() {
+            var quantity = document.getElementById("numb");
+            if (quantity %10 == 0 && 10 <= quantity >= 100) {
+                alert("submitted");
+            }
+            else {
+                alert("share value should be in blocks in 10's and its min is 10 and max is 100")
+            }
+        }
+    </script>
+</body>
+</html>
